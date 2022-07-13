@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+
+
+body{
+    margin-top: 0px ;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 0px;
+    height: 200em;
+    background-color: #444444;
+   
+}
+
+#navClass{
+    background-color: #292c2f;
+    width: 100%;
+    height : auto;
+}
+
+#navClass ul {
+    
+    list-style-type: none;
+    margin-top: 0em;
+   
+
+}
+
+#navClass>ul>li>a{
+   
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.5em;
+
+}
+#navClass>ul> li >#logo{
+   
+    color: yellow !important;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 2.20em;
+
+}
+
+#navClass>ul>li{
+    display: inline-block;
+    
+    padding-top :19px;
+    padding-bottom: 19px;
+    padding-right: 1em;
+    padding-left: 1em;
+    text-transform: uppercase;
+}
+
+
+
+.itemlia{
+    
+    padding-top :34px;
+    padding-bottom: 22px;
+    padding-right :7px;
+    padding-left: 6px;
+}
+
+.itemli :hover{
+background-color: grey;
+
+}
+
+/* main style*/
+.main{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  width: 100%;
+  height: auto;
+  
+
+}
+.main>#formdiv{
+
+  width: 40em;
+  height: 30em;
+  background-color: #292c2f;
+  padding: 1em;
+  border-radius: 2em;
+
+}
+#formid{
+
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 12px;
+}
+.inputform{
+
+  border-radius: 9px;
+  font-size: 1em;
+  padding: .8em;
+  margin: 1em;
+
+}
+.inputform:hover{
+
+border-color: yellow;
+
+}
+
+.labelform{
+  color: white;
+  padding-left: 1.2em;
+  font-size: 1.25em;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: 'Rubik Moonrocks', cursive;
+}
+
+#submitid{
+  width: 25em;
+  height: 3em;
+  border-radius: 5em;
+  margin-left: 11em;
+  margin-top: 4em;
+  background-color: yellow;
+  color: black;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+#submitid span{
+
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 1.5em;
+  transition: 0.5s;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: 'Rubik Moonrocks', cursive;
+}
+.btnform:hover{
+
+  background-color: rgb(245, 216, 136) !important;
+ 
+    
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+
+.footer{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer.footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer .footer-links .link-1:before {
+  content: none;
+}
+
+.footer .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer .footer-left, .footer .footer-right {
+    text-align: center;
+  }
+  .footer .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
