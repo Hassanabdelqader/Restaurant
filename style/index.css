@@ -6,7 +6,7 @@ body{
     margin-left: 0px;
     margin-right: 0px;
     padding-bottom: 0px;
-    height: 200em;
+    height: 50em;
     background-color: #444444;
    
 }
@@ -69,9 +69,9 @@ background-color: grey;
 .main{
 
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
- 
+ padding: 2em;
   width: 100%;
   height: auto;
   
@@ -141,9 +141,79 @@ border-color: yellow;
 }
 .btnform:hover{
 
-  background-color: rgb(245, 216, 136) !important;
- 
-    
+  background-color: rgb(245, 216, 136) !important;    
+}
+
+
+.main>#tablediv{
+  background-color: #292c2f;
+  border-radius: 1em;
+ padding: 1em;
+  width: 35em;
+  height: 30em;
+  margin-left: 3em;
+  overflow-y: scroll;
+}
+
+#noData{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 35%;
+}
+
+.data-main-table{
+  border: 1px solid black;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+.data-row
+{
+
+  border: 1px solid black ;
+  text-align: center;
+  padding: 8px;
+  background-color: white;
+  
+}
+.data-hr
+{
+
+  border: 1px solid black ;
+  text-align: center;
+  padding: 8px;
+  background-color: yellow;
+  color: black;
+  
+}
+.data-td
+{
+
+  border: 1px solid black ;
+  text-align: center;
+  padding: 8px;
+  color: black;
+  
+}
+
+.data-row:nth-child(even)
+{
+
+  background-color: grey !important;
+  color: white !important;
+  
+}
+
+.data-row:hover
+{
+
+  background-color: #dddddd17 !important;
+  
 }
 
 
@@ -155,7 +225,10 @@ border-color: yellow;
 }
 
 
+/* footer take from https://codepen.io/julesforrest/*/
+
 .footer{
+ 
   background-color: #292c2f;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
