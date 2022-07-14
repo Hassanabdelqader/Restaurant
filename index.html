@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restuarent</title>
+</head>
+<body>
+
+    <header >
+      
+        <nav id='navClass'>
+                <ul>
+                    <li id="logoli"><a href="#"  id="logo">Restaurent</a></li>
+                    <li class="itemli"><a href="#"  class="itemlia">Home</a></li>
+                    <li class="itemli"><a href="secondPage.html" class="itemlia">Second Page</a></li>
+                    <li class="itemli"><a href="thirdPage.html" class="itemlia">Third Page</a></li>
+                </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+        <div id="formdiv">
+           <form action="submit" id="formid">
+
+            <label for="foodName" class="labelform">Food Name</label>
+            <input type="text" id="idfoodName" class="inputform" placeholder="Enter Food Name" required><br>
+
+            
+            <label for="typeOfFood"  class="labelform">Type</label>
+            
+            <select name="typeOfFood" id="typeOfFood"   class="inputform" required>
+                    <option disabled="disabled" selected="selected" value="">Select an option...</option>
+                <option>Fruit and vegetables</option>
+                <option>Starchy food</option>
+                <option>Dairy</option>
+                <option>Protein</option>
+                <option>Fat</option>
+            </select> <br>
+
+            <label for="price" class="labelform">Price</label>
+            <input type="text" id="price" class="inputform" placeholder="Enter Price" required>
+
+
+
+        <button type="submit"  id="submitid" class="btnform"><span>Add Item </span></button>
+           </form>
+        </div>
+
+        <div id="tablediv">
+
+            <h1 id="noData">No Data to show</h1>
+
+        </div>
+
+
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-right">
+
+            <a href="https://web.facebook.com/7asnMousa/"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/hasan-m-3baaa4177/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Hassanabdelqader"><i class="fa fa-github"></i></a>
+
+        </div>
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a class="link-1" href="#">Home</a>
+                <a href="#">Contact</a>
+            </p>
+
+            <p>Restuarent &copy; 2022 Hasan 7asnMousa</p>
+        </div>
+
+    </footer>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
+
