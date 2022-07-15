@@ -9,19 +9,21 @@ table.setAttribute('class','data-main-table');
 let tbody = document.createElement('tbody');
 tbody.setAttribute('id' , 'resultbody2');
 
-function Food(foodName,type,price){
+
+function Food(index,foodName,type,price){
     this.foodId = generateUniq();
+    this.index = index;
     this.foodName = foodName;
     this.type = type;
     this.price =price;
     arrFood.push(this);
-    console.log(arrFood[this.foodId].foodId);
+    console.log(arrFood[index].foodId);
 }
 
 
 Food.prototype.showResult =function(){
 
-    if (this.foodId == 0) {
+    if (this.index == 0) {
             
         var element = document.getElementById("noData");
     element.parentNode.removeChild(element);
@@ -65,22 +67,22 @@ Food.prototype.showResult =function(){
 
         let td1 = document.createElement('td');
         td1.setAttribute("class", "data-td");
-        td1.textContent = arrFood[this.foodId].foodId;;
+        td1.textContent = arrFood[this.index].foodId;;
         trbody.appendChild(td1);
 
         let td2 = document.createElement('td');
         td2.setAttribute("class", "data-td");
-        td2.textContent = arrFood[this.foodId].foodName;;
+        td2.textContent = arrFood[this.index].foodName;;
         trbody.appendChild(td2);
 
         let td3 = document.createElement('td');
         td3.setAttribute("class", "data-td");
-        td3.textContent = arrFood[this.foodId].type;;
+        td3.textContent = arrFood[this.index].type;;
         trbody.appendChild(td3);
 
         let td4 = document.createElement('td');
         td4.setAttribute("class", "data-td");
-        td4.textContent = arrFood[this.foodId].price;;
+        td4.textContent = arrFood[this.index].price;;
         trbody.appendChild(td4);
 
         //End of first Row
@@ -103,22 +105,22 @@ Food.prototype.showResult =function(){
 
         let td1 = document.createElement('td');
         td1.setAttribute("class", "data-td");
-        td1.textContent = arrFood[this.foodId].foodId;;
+        td1.textContent = arrFood[this.index].foodId;
         trbody.appendChild(td1);
 
         let td2 = document.createElement('td');
         td2.setAttribute("class", "data-td");
-        td2.textContent = arrFood[this.foodId].foodName;;
+        td2.textContent = arrFood[this.index].foodName;;
         trbody.appendChild(td2);
 
         let td3 = document.createElement('td');
         td3.setAttribute("class", "data-td");
-        td3.textContent = arrFood[this.foodId].type;;
+        td3.textContent = arrFood[this.index].type;;
         trbody.appendChild(td3);
 
         let td4 = document.createElement('td');
         td4.setAttribute("class", "data-td");
-        td4.textContent = arrFood[this.foodId].price;;
+        td4.textContent = arrFood[this.index].price;;
         trbody.appendChild(td4);
 
 
@@ -134,20 +136,19 @@ Food.prototype.showResult =function(){
 
 
 function generateUniq() {
-    if (arrFood.length==0) {
-        return 0;
-    }else {
-        return arrFood.length;
+  
+        return arrFood.length + 4000;
     }
-}
 
 
 
+let count = 0;
 function getData(event) {
     event.preventDefault();
-    const temp= new Food(event.target.idfoodName.value ,event.target.typeOfFood.value,event.target.price.value );
+    const temp= new Food( count, event.target.idfoodName.value ,event.target.typeOfFood.value,event.target.price.value );
 
     temp.showResult();
+    count++;
   }
   
   const form = document.getElementById('formid');
