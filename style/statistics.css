@@ -6,7 +6,7 @@ body{
     margin-left: 0px;
     margin-right: 0px;
     padding-bottom: 0px;
-    height: 50em;
+    height: 20em;
     background-color: #444444;
    
 }
@@ -73,82 +73,82 @@ background-color: grey;
   align-items: center;
  padding: 2em;
   width: 100%;
-  height: auto;
+  height: 32em;
   
 
 }
-.main>#formdiv{
 
-  width: 40em;
-  height: 30em;
+
+.main>#tablediv{
   background-color: #292c2f;
-  padding: 1em;
-  border-radius: 2em;
-
+  border-radius: 1em;
+ padding: 3em;
+  width: 80em;
+  height: 25em;
+  margin-left: 3em;
+  overflow-y: scroll;
 }
-#formid{
 
+#noData{
+  color: white;
   display: flex;
   flex-direction: column;
-  padding: 1em;
-  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15%;
 }
-.inputform{
 
-  border-radius: 9px;
-  font-size: 1em;
-  padding: .8em;
-  margin: 1em;
-
-}
-.inputform:hover{
-
-border-color: yellow;
+.data-main-table{
+  border: 1px solid black;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 
 }
 
-.labelform{
-  color: white;
-  padding-left: 1.2em;
-  font-size: 1.25em;
-  font-family: 'Edu VIC WA NT Beginner', cursive;
-  font-family: 'Rubik Moonrocks', cursive;
-}
+.data-row
+{
 
-#submitid{
-  width: 25em;
-  height: 3em;
-  border-radius: 5em;
-  margin-left: 11em;
-  margin-top: 4em;
+  border: 1px solid black ;
+  text-align: center;
+  padding: 8px;
+  background-color: white;
+  
+}
+.data-hr
+{
+
+  border: 1px solid black ;
+  text-align: center;
+  padding: 8px;
   background-color: yellow;
   color: black;
+  
+}
+.data-td
+{
 
-  cursor: pointer;
+  border: 1px solid black ;
   text-align: center;
-  transition: all 0.5s;
+  padding: 8px;
+  color: black;
+  
 }
 
-#submitid span{
+.data-row:nth-child(even)
+{
 
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-size: 1.5em;
-  transition: 0.5s;
-  font-family: 'Edu VIC WA NT Beginner', cursive;
-  font-family: 'Rubik Moonrocks', cursive;
-}
-.btnform:hover{
-
-  background-color: rgb(245, 216, 136) !important;    
+  background-color: grey !important;
+  color: white !important;
+  
 }
 
+.data-row:hover
+{
 
-
-
-
-
+  background-color: #dddddd17 !important;
+  
+}
 
 
 

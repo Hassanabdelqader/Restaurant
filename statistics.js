@@ -1,30 +1,27 @@
 
-let arrFood = [];
+
 
 let divresult=document.getElementById('tablediv');
 let table = document.createElement('table');
 table.setAttribute('id','resulttable2');
 table.setAttribute('class','data-main-table');
-const form = document.getElementById('formid');
+
 let tbody = document.createElement('tbody');
 tbody.setAttribute('id' , 'resultbody2');
 
-
-function Food(index,foodName,type,price){
-    this.foodId = generateUniq();
-    this.index = index;
-    this.foodName = foodName;
-    this.type = type;
-    this.price =price;
-    arrFood.push(this);
-    console.log(arrFood[index].foodId);
-}
+let arrFood = getFromLocal();
 
 
-Food.prototype.showResult =function(){
 
-    if (this.index == 0) {
-            
+function showData(value){
+
+    console.log(value.foodName);
+
+    if (value == undefined) {
+        return;
+    }
+    if (value.index== 0) {
+     
         var element = document.getElementById("noData");
     element.parentNode.removeChild(element);
 
@@ -67,22 +64,22 @@ Food.prototype.showResult =function(){
 
         let td1 = document.createElement('td');
         td1.setAttribute("class", "data-td");
-        td1.textContent = arrFood[this.index].foodId;;
+        td1.textContent = value.foodId;
         trbody.appendChild(td1);
 
         let td2 = document.createElement('td');
         td2.setAttribute("class", "data-td");
-        td2.textContent = arrFood[this.index].foodName;;
+        td2.textContent = value.foodName;;
         trbody.appendChild(td2);
 
         let td3 = document.createElement('td');
         td3.setAttribute("class", "data-td");
-        td3.textContent = arrFood[this.index].type;;
+        td3.textContent = value.type;;
         trbody.appendChild(td3);
 
         let td4 = document.createElement('td');
         td4.setAttribute("class", "data-td");
-        td4.textContent = arrFood[this.index].price;;
+        td4.textContent = value.price;;
         trbody.appendChild(td4);
 
         //End of first Row
@@ -92,12 +89,13 @@ Food.prototype.showResult =function(){
         table.appendChild(tbody);
 
         divresult.appendChild(table);
-      
+    
     } else {
         
    
 
         //Add the reset of table 
+       
 
         let trbody = document.createElement('tr'); 
         
@@ -105,22 +103,22 @@ Food.prototype.showResult =function(){
 
         let td1 = document.createElement('td');
         td1.setAttribute("class", "data-td");
-        td1.textContent = arrFood[this.index].foodId;
+        td1.textContent = value.foodId;
         trbody.appendChild(td1);
 
         let td2 = document.createElement('td');
         td2.setAttribute("class", "data-td");
-        td2.textContent = arrFood[this.index].foodName;;
+        td2.textContent = value.foodName;;
         trbody.appendChild(td2);
 
         let td3 = document.createElement('td');
         td3.setAttribute("class", "data-td");
-        td3.textContent = arrFood[this.index].type;;
+        td3.textContent = value.type;;
         trbody.appendChild(td3);
 
         let td4 = document.createElement('td');
         td4.setAttribute("class", "data-td");
-        td4.textContent = arrFood[this.index].price;;
+        td4.textContent = value.price;;
         trbody.appendChild(td4);
 
 
@@ -132,58 +130,23 @@ Food.prototype.showResult =function(){
       
 
         }
+        
     };
 
 
-function generateUniq() {
-  
-        return arrFood.length + 4000;
-    }
 
 
-
-function getData() {
-   
-   
-    //temp.showResult();
-    saveToLocal(temp);
-    
-  }
-
-
-  
-let count = 0;
-function getFromLocal(event){
-
-    event.preventDefault();
-    
+function getFromLocal(){    
     var getJson = localStorage.getItem('foodMenu')
-    if(getJson){
-        arrFood = JSON.parse(getJson);
+    if(getJson)
+        return JSON.parse(getJson);  
+}
 
-        count = arrFood.length;
-        const temp= new Food( count, event.target.idfoodName.value ,event.target.typeOfFood.value,event.target.price.value );
-        setToLocal(temp);
-    }else{
 
-        const temp= new Food( count, event.target.idfoodName.value ,event.target.typeOfFood.value,event.target.price.value );
-        setToLocal(temp);
-    }
+for (let index = 0; index < arrFood.length; index++) {
+    showData(arrFood[index]);
     
 }
-function setToLocal(temp){
-  
-    const stringV= JSON.stringify(arrFood);
-
-    localStorage.setItem("foodMenu" , stringV);
-    form.reset();
-    alert(`${temp.foodName} Added successfully !! `);
-}
-
-  
-  form.addEventListener('submit', getFromLocal);
-
-  
 
 
 
