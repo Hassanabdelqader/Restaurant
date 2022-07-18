@@ -21,6 +21,15 @@ function Food(index,foodName,type,price){
 }
 
 
+  function itemAdded(name) {
+    Swal.fire(
+        `Congratulation`,
+        `${name} Added Successfully`,
+        'success'
+      )
+  }
+
+
 Food.prototype.showResult =function(){
 
     if (this.index == 0) {
@@ -177,7 +186,7 @@ function setToLocal(temp){
 
     localStorage.setItem("foodMenu" , stringV);
     form.reset();
-    alert(`${temp.foodName} Added successfully !! `);
+    itemAdded(temp.foodName);
 }
 
   
