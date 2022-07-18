@@ -69,11 +69,13 @@ background-color: grey;
 .main{
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
- padding: 2em;
+  
+  padding: 2em;
   width: 100%;
-  height: 32em;
+  height: auto;
   
 
 }
@@ -83,6 +85,7 @@ background-color: grey;
   background-color: #292c2f;
   border-radius: 1em;
  padding: 3em;
+ padding-left: 5em;
   width: 80em;
   height: 25em;
   margin-left: 3em;
@@ -247,3 +250,17 @@ background-color: grey;
     line-height: 1.8;
   }
 }
+
+
+
+#myChart{
+
+ 
+}
+
+.divchart{
+  background-color: white;
+  margin-top: 2em;
+  border-radius: 1em;
+}
+
