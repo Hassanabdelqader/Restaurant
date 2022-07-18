@@ -21,13 +21,6 @@ function Food(index,foodName,type,price){
 }
 
 
-  function itemAdded(name) {
-    Swal.fire(
-        `Congratulation`,
-        `${name} Added Successfully`,
-        'success'
-      )
-  }
 
 
 Food.prototype.showResult =function(){
@@ -188,6 +181,13 @@ function setToLocal(temp){
     form.reset();
     itemAdded(temp.foodName);
 }
+function itemAdded(name) {
+    Swal.fire(
+        'congrat !!',
+        'Your Item added successfully',
+        'success'
+    )
+  }
 
   
   form.addEventListener('submit', getFromLocal);
